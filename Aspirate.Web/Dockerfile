@@ -13,7 +13,7 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Aspirate.Web/Aspirate.Web.csproj", "Aspirate.Web/"]
-COPY ["Aspirate.ServiceDefaults/Aspirate.ServiceDefaults.csproj", "Aspirate.ServiceDefaults/"]
+COPY ["../Aspirate.ServiceDefaults/Aspirate.ServiceDefaults.csproj", "Aspirate.ServiceDefaults/"]
 RUN dotnet restore "./Aspirate.Web/Aspirate.Web.csproj"
 COPY . .
 WORKDIR "/src/Aspirate.Web"
