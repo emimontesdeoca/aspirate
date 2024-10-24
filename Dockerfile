@@ -13,7 +13,7 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Aspirate.Web/Aspirate.Web.csproj", "Aspirate.Web/"]
-RUN dotnet restore "./Aspirate.Web/Aspirate.Web.csproj"
+RUN dotnet restore "./Aspirate.Web.csproj"
 COPY . .
 WORKDIR "/src/Aspirate.Web"
 RUN dotnet build "./Aspirate.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
