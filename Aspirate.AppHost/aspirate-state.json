@@ -1,0 +1,21 @@
+{
+  "projectPath": ".",
+  "outputPath": "aspirate-output",
+  "containerImageTags": [
+    "latest"
+  ],
+  "containerBuilder": "docker",
+  "outputFormat": "compose",
+  "privateRegistryEmail": "aspir8@aka.ms",
+  "useCustomNamespace": false,
+  "secrets": {
+    "salt": "g2MScVpCaC12zwy2",
+    "hash": "KuOFdzirhTfNpO1b8TAeNU0\u002BgmcXSAPr25kCG4HKJ84=",
+    "secrets": {
+      "keycloak-password": {
+        "value": "g2MScVpCaC12zwy2JMCzttf\u002BvBVZC3AGKtso4VPhsttGSd\u002BunOu0Q5Lw86tfxK5hwxg="
+      }
+    }
+  },
+  "processAllComponents": true
+}
