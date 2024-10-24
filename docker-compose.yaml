@@ -16,7 +16,7 @@ services:
     restart: unless-stopped
   webfrontend:
     container_name: "webfrontend"
-    build: Aspirate.Web/Aspirate.Web
+    build: ./Aspirate.Web
     environment:
       OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES: "true"
       OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES: "true"
