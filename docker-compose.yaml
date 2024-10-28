@@ -9,7 +9,7 @@ services:
     - "aspirate-apphost-523a91e4bd-keycloak-data:/opt/keycloak/data"
     ports:
     - target: 8080
-      published: 8080
+      published: 9090
     command:
     - "start"
     - "--import-realm"
@@ -23,10 +23,10 @@ services:
       OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES: "true"
       OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY: "in_memory"
       ASPNETCORE_FORWARDEDHEADERS_ENABLED: "true"
-      HTTP_PORTS: "9090"
-      services__keycloak__http__0: "http://keycloak:8080"
+      HTTP_PORTS: "8080"
+      services__keycloak__http__0: "http://keycloak:9090"
     ports:
-    - target: 9090
+    - target: 8080
       published: 10000
     - target: 8443
       published: 10001
