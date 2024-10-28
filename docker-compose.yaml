@@ -24,7 +24,7 @@ services:
       OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY: "in_memory"
       ASPNETCORE_FORWARDEDHEADERS_ENABLED: "true"
       HTTP_PORTS: "8080"
-      services__keycloak__http__0: "http://keycloak:8080"
+      services__keycloak__http__0: "http://keycloak:8090"
     ports:
     - target: 8080
       published: 10000
