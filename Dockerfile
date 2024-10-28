@@ -12,8 +12,9 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["./Aspirate.Web.csproj", "Aspirate.Web/"]
-RUN dotnet restore "./Aspirate.Web.csproj"
+COPY ["Aspirate.Web/Aspirate.Web.csproj", "Aspirate.Web/"]
+COPY ["Aspirate.ServiceDefaults/Aspirate.ServiceDefaults.csproj", "Aspirate.ServiceDefaults/"]
+RUN dotnet restore "./Aspirate.Web/Aspirate.Web.csproj"
 COPY . .
 WORKDIR "/src/Aspirate.Web"
 RUN dotnet build "./Aspirate.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
